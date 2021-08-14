@@ -11,8 +11,7 @@ module.exports = {
     filename: "bundle.[contenthash].js",
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: "./index.html" }),
-    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({ template: "./index.html" })
   ],
   module: {
     rules: [
