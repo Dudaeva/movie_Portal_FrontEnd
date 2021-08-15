@@ -1,4 +1,4 @@
-import getOneMovies from "./getOneMovie";
+import getOneMovie from "./getOneMovie";
 
 const getMoviesByCategory = async (id) => {
   const movies = await fetch(`http://localhost:3000/movies/categories/${id}`);
@@ -6,6 +6,7 @@ const getMoviesByCategory = async (id) => {
 
   const main = document.querySelector("#main");
   const movieDiv = document.createElement("div");
+  const films = document.querySelector(".films");
 
   for (let i = 0; i < json.length; i++) {
     const movieDiv1 = document.createElement("div");
@@ -20,7 +21,12 @@ const getMoviesByCategory = async (id) => {
 
     movieDiv1.append(img, nameMovie);
     movieDiv.append(movieDiv1);
-    main.append(movieDiv) 
+    main.append(movieDiv);
+
+    nameMovie.addEventListener("click", () => {
+      films.firstElementChild.textContent = "";
+      getOneMovie(json[i]._id);
+    });
   }
-}
+};
 export default getMoviesByCategory;

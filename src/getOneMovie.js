@@ -1,6 +1,9 @@
-const getOneMovies = async (id) => {
+import getReviews from "./getReviews";
+
+const getOneMovie = async (id) => {
   const movies = await fetch(`http://localhost:3000/movies/${id}`);
   const json = await movies.json();
+
   const main = document.getElementById("main");
   const movieDiv = document.createElement("div");
 
@@ -25,8 +28,8 @@ const getOneMovies = async (id) => {
 
     movieDiv1.append(img, nameMovie, years, textMovie);
     movieDiv.append(movieDiv1);
-    main.append(movieDiv)
+    main.append(movieDiv);
   }
 };
 
-export default getOneMovies;
+export default getOneMovie;

@@ -1,0 +1,22 @@
+body{
+    background-color: gainsboro;
+}
+.category{
+    display: flex;
+    justify-content: space-around;
+}
+#header{
+    text-align: center;
+    background-color: rgb(177, 36, 128);
+}
+.imgDiv,.infoDiv{
+    width: 450px;
+    margin: 20px;
+}
+.imgDiv img{
+    width: 350px;
+}
+.allmovies{
+    display: flex; 
+    flex-wrap: wrap;
+}
