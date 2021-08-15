@@ -1,3 +1,3 @@
-import getMovies from "./getMovies";
+import getCategories from "./getCategories";
+getCategories()
 
-getMovies()

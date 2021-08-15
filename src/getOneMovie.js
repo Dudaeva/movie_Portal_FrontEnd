@@ -1,5 +1,5 @@
-const getOneMovies = async () => {
-  const movies = await fetch(`http://localhost:3000/movies/${_id}`);
+const getOneMovies = async (id) => {
+  const movies = await fetch(`http://localhost:3000/movies/${id}`);
   const json = await movies.json();
   const main = document.getElementById("main");
   const movieDiv = document.createElement("div");

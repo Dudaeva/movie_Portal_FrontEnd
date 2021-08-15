@@ -1,13 +1,13 @@
 import getOneMovie from "./getOneMovie";
 
-const getMovies = async () => {
+const getMovies = async (id) => {
   const movies = await fetch("http://localhost:3000/movies");
   const json = await movies.json();
   const main = document.querySelector("#main");
   const movieDiv = document.createElement("div");
 
   for (let i = 0; i < json.length; i++) {
-      
+
     const img = document.createElement("img");
     img.className = "movies_img";
     img.src = json[i].image;
@@ -19,10 +19,7 @@ const getMovies = async () => {
     movieDiv.append(img, nameMovie);
     main.prepend(movieDiv);
 
-    nameMovie.addEventListener("click", (ev) => {
-      ev.target.parentElement.remove();
-      getOneMovie(json[i]._id);
-    });
+    movieDiv.addEventListener("click",getOneMovie(json[i].id));
   }
 };
 
