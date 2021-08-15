@@ -4,8 +4,8 @@ const getOneMovie = async (id) => {
   const movies = await fetch(`http://localhost:3000/movies/${id}`);
   const json = await movies.json();
 
-  const main = document.getElementById("main");
-  const movieDiv = document.createElement("div");
+  const films = document.querySelector(".films");
+  const oneMovieDiv = document.createElement("div");
 
   for (let i = 0; i < json.length; i++) {
     const movieDiv1 = document.createElement("div");
@@ -26,9 +26,11 @@ const getOneMovie = async (id) => {
     textMovie.className = "movies_text";
     textMovie.textContent = json[i].description;
 
+    getReviews(json._id)
+
     movieDiv1.append(img, nameMovie, years, textMovie);
-    movieDiv.append(movieDiv1);
-    main.append(movieDiv);
+    oneMovieDiv.append(movieDiv1);
+    films.append(oneMovieDiv);
   }
 };
 

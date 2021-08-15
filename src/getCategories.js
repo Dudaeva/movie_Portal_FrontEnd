@@ -9,7 +9,7 @@ const getCategories = async () => {
   const category = document.querySelector(".category");
 
   for (let i = 0; i < json.length; i++) {
-    const h1 = document.createElement("h2");
+    const h1 = document.createElement("h1");
     h1.textContent = json[i].name;
     category.prepend(h1);
 

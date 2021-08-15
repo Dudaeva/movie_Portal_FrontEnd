@@ -1,17 +1,25 @@
 body{
     background-color: gainsboro;
+    width: 1500px;
 }
 .category{
     display: flex;
     justify-content: space-around;
+    background-color: rgb(243, 113, 197);
+}
+#header, #main, .category{
+    margin-bottom: 20px;
 }
 #header{
     text-align: center;
-    background-color: rgb(177, 36, 128);
+}
+.films{
+    background-color: rgb(243, 113, 197);
 }
 .imgDiv,.infoDiv{
-    width: 450px;
-    margin: 20px;
+    width: 320px;
+    
+    padding: 20px;
 }
 .imgDiv img{
     width: 350px;
@@ -19,4 +27,16 @@ body{
 .allmovies{
     display: flex; 
     flex-wrap: wrap;
+}
+.movieCat img{
+    width: 400px;
+    height: 550px;
+    margin-right: 30px;
+}
+.movieCat{
+    display: flex;
+}
+h3{
+    font-weight:normal;
+
 }

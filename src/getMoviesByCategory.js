@@ -6,6 +6,7 @@ const getMoviesByCategory = async (id) => {
 
   const main = document.querySelector("#main");
   const movieDiv = document.createElement("div");
+  movieDiv.className = "movieCat"
   const films = document.querySelector(".films");
 
   for (let i = 0; i < json.length; i++) {

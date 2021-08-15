@@ -33,7 +33,7 @@ const getMovies = async () => {
     films.append(moviesDiv);
 
     nameMovie.addEventListener("click", () => {
-      films.parentElement.remove();
+      films.firstElementChild.textContent = "";
       getOneMovie(json1[i]._id);
     });
   }
