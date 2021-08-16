@@ -14,7 +14,7 @@ const getCategories = async () => {
     category.prepend(h1);
 
     h1.addEventListener("click", () => {
-      films.firstElementChild.textContent = "";
+      films.firstElementChild.remove();
       getMoviesByCategory(json[i]._id);
     });
   }

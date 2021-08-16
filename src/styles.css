@@ -5,7 +5,7 @@ body{
 .category{
     display: flex;
     justify-content: space-around;
-    background-color: rgb(243, 113, 197);
+    
 }
 #header, #main, .category{
     margin-bottom: 20px;
@@ -14,7 +14,7 @@ body{
     text-align: center;
 }
 .films{
-    background-color: rgb(243, 113, 197);
+   
 }
 .imgDiv,.infoDiv{
     width: 320px;
@@ -23,6 +23,7 @@ body{
 }
 .imgDiv img{
     width: 350px;
+    height: 525px;
 }
 .allmovies{
     display: flex; 

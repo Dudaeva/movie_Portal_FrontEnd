@@ -3,7 +3,7 @@ const getReviews = async (id) => {
   const json = await reviews.json();
 
   const films = document.querySelector(".films");
-  //const reviewsDiv = document.createElement("div");
+  const oneMovieDiv = document.createElement("div");
   const comment = document.createElement("h1");
   comment.textContent = "Отзывы";
 
@@ -19,10 +19,12 @@ const getReviews = async (id) => {
     text.className = "review_text";
     text.textContent = json[i].text;
 
-    divReview.append(name, text);
+    divReview.append(comment, name, text);
 
-    //reviewsDiv.append(comment, divReview);
-    films.append(comment, divReview);
+    //divReview.append(comment, divReview);
+    //main.append(reviewsDiv)
+    oneMovieDiv.append(divReview);
+    films.append(oneMovieDiv);
   }
 };
 export default getReviews;

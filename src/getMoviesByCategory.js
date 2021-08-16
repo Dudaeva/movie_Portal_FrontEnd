@@ -13,11 +13,9 @@ const getMoviesByCategory = async (id) => {
     const movieDiv1 = document.createElement("div");
 
     const img = document.createElement("img");
-    img.className = "movies_img";
     img.src = json[i].image;
 
     const nameMovie = document.createElement("h2");
-    nameMovie.className = "movies_name";
     nameMovie.textContent = json[i].nameMovie;
 
     movieDiv1.append(img, nameMovie);
